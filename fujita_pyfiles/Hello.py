@@ -1,2 +1,2 @@
 #文字列の表示
-print("Hello")
+print("Hello,World!!!!!!!!!!!!!!!!!!!!",end="")
