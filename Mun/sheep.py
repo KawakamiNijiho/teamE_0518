@@ -1,4 +1,4 @@
-#!/usr/env python3
+#!/bin/env python3
 
 # 양자리가1마리,양자리가2마리,양자리가n마리로건넨정수의횟수만큼반복하는프로그램sheep.py 을개변한sheepfile.py 을만듭니다.
 # 출력은 파일로 합니다.
