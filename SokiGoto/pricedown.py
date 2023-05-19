@@ -34,7 +34,7 @@ elif hm_class == "果物類":
 for label in hinmoku.keys():
     # 品目名がcheckの中にあれば値段を下げる
     if label in check:
-        hinmoku[label] = max(0, hinmoku[label] - price_down)
+        hinmoku[label] = max(1, hinmoku[label] - price_down)
 
 # 品目の結果を出力する
 print(hinmoku, end="")
