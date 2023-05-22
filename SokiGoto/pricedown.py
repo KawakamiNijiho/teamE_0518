@@ -22,19 +22,12 @@ fruits = ("リンゴ", "みかん", "バナナ")  # 果物類をタプルで定�
 alcohol = ("ビール", "日本酒")  # 酒類をタプルで定義
 noodles = ("ラーメン", "うどん", "パスタ")  # 麺類をタプルで定義
 
-# 値下げの種別によって判定するタプルを選ぶ
-if hm_class == "麺類":
-    check = noodles
-elif hm_class == "酒類":
-    check = alcohol
-elif hm_class == "果物類":
-    check = fruits
+classes = {"麺類": noodles, "酒類": alcohol, "果物類": fruits}
 
 # 品目をkeyで回す
-for label in hinmoku.keys():
+for label in classes[hm_class]:
     # 品目名がcheckの中にあれば値段を下げる
-    if label in check:
-        hinmoku[label] = max(1, hinmoku[label] - price_down)
+    hinmoku[label] = max(1, hinmoku[label] - price_down)
 
 # 品目の結果を出力する
 print(hinmoku, end="")
