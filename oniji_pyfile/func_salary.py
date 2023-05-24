@@ -6,7 +6,7 @@ def calcsalary(salary):
 
     from decimal import Decimal, ROUND_HALF_UP
     tax = Decimal(str(tax)).quantize(Decimal("0"), rounding=ROUND_HALF_UP)
-    
+
     pay = int(salary - tax)
 
     
