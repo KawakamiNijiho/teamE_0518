@@ -7,23 +7,21 @@
 
 import sys
 
-args = sys.argv 
-count = int(args[1])
+num = int(sys.argv[1])
 
 # 引数回forを繰り返す
-for i in range(count):
+for i in range(num):
     # i + 1して出力する
-    sheep = i+1
-    print("ひつじが",sheep,"匹")
+    print(f"ひつじが{i+1}匹")
     
     
-def count_sheep(count):
-    with open('./files/sheep.txt', 'w') as file:
-        for i in range(1, count + 1):
-            file.write('ひつじが{}匹\n'.format(i))
-        file.close
+def count_sheep(n):
+    with open('./files/sheep.txt', 'w') as f:
+        for i in range(1, n + 1):
+            f.write('ひつじが{}匹\n'.format(i))
+        f.close
         
-count_sheep(int(args[1]))
+count_sheep(num)
 
 
 
